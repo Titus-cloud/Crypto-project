@@ -2,7 +2,7 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 
 export const CoinContext = createContext();
 
-export const CoinContextProvider = ({children}) => {
+export const CoinContextProvider = ({ children }) => {
   const [allCoin, setAllCoin] = useState([]);
   const [currency, setCurrency] = useState({
     name: "USD",
@@ -35,7 +35,9 @@ export const CoinContextProvider = ({children}) => {
   //   allCoin,
   // };
   return (
-    <CoinContext.Provider value={{allCoin, currency, setCurrency, setAllCoin}}>
+    <CoinContext.Provider
+      value={{ allCoin, currency, setCurrency, setAllCoin }}
+    >
       {children}
     </CoinContext.Provider>
   );
